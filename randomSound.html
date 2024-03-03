@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNG Volume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>RNG Volume</h1>
+    <p>Suggestion by <em>rimuru simp</em></p>
+    <form action="get">
+    <input type="range" name="vol" id="vol" min="0" max="100" readonly onmouseup="setVolume()">
+    </form>
+    <button onclick="play()">Play music</button>
+
+    <script>
+        const maxVolume = 100
+        const music = new Audio('https://www.myinstants.com/media/sounds/chipi-chapa-cat-meme.mp3');
+        music.volume = 0.5;
+        let startVolume = 0;
+        const volumeSlider = document.getElementById("vol");
+        console.log(volumeSlider.value);
+        function setVolume(){
+            const startVolume = volumeSlider.value;
+            const endValue = getRandom(maxVolume);
+            //console.log(endValue);
+
+            for (i = 0; i <10; i += i +1){
+                setTimeout(function() {setTo(getRandom(maxVolume))}, i*100);
+
+            setTimeout(function() {setTo(endValue)}, 1000);}
+            
+        }
+        function setTo(value){
+            volumeSlider.value = value;
+            music.volume = volumeSlider.value/100;
+        }
+
+
+        function getRandom(max){
+            return Math.floor(Math.random()*max);
+        }
+        function play(){
+            music.pause()
+            music.currentTime = 0;
+            music.play()
+        }
+    </script>
+</body>
+</html>

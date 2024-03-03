@@ -1,0 +1,8 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.line{ /*For elements that should be displayed in a new line*/
+    display: block;
+    margin: 5px
+}
