@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat (punchable)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #fist, #cat, #scratch{
+            transition: 1s;
+        }
+        #scratch{
+            top : -300px;
+            left : 50%;
+            position: fixed;
+        }
+        
+    </style>
+</head>
+<body id="body">
+    <img src="./img/scratch.png" alt="Scratch ow" id="scratch">
+    <h1>Cat (punchable)</h1>
+    <p>Suggestion by <em>tr1ha</em></p>
+    <p>This site does <strong>not</strong> endourse animal abuse since this is a cartoon cat.</p>
+    <img src="./img/cat.png" alt="Image of a cat" onclick="punch()" id="cat"><br>
+    <img src="./img/fist.png" alt="Fist for punching" id="fist">
+    <script>
+        let punchcounter = 0
+        const fist = document.getElementById("fist");
+        const cat = document.getElementById("cat");
+        const scratch = document.getElementById("scratch")
+
+        function punch(){
+            if (punchcounter < 3){
+            fist.style.transform = "translate(0,-200px)";
+            if (punchcounter === 2){
+                cat.style.transform = "translate(-200px,0px)";
+                cat.src = "./img/catmad.png";
+            }
+            setTimeout(() => {unpunch()
+                
+            }, 1000);
+            punchcounter += 1;}
+        }
+        function unpunch(){
+            fist.style.transform = "translate(0,0)";
+            if (punchcounter === 3){
+                scratch.style.transform = "translate(0px,1000px)";
+                setTimeout(() => {document.getElementById("body").style.backgroundColor = "darkred";
+                
+            }, 1000);
+            }
+        }
+
+
+    </script>
+</body>
+</html>
