@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving button</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #log{
+            transition: 1s;
+        }
+        .moved{
+            transform: translate(0px, 200px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign in to the dodge comunity</h1>
+    <p>Suggestion by <em>ElleryAng-Lee</em></p>
+
+    <form action="#" autocomplete="off">
+        <p>
+        <label for="usr">Username:</label>
+        <input type="text" name="usr">
+        </p>
+        <p>
+        <label for="pass">Password:</label>
+        <input type="password" name="pass">
+        </p>
+        <input type="submit" value="Log in" id="log" onmouseenter="run()" onmouseleave="allow()">
+    </form>
+
+    <script>
+        const logInBtn = document.getElementById("log");
+        let coolDown = true;
+        function run(){
+            if (coolDown){
+            if (logInBtn.classList.contains("moved"))
+                logInBtn.classList.remove("moved");
+            else
+                logInBtn.classList.add("moved");
+            coolDown = false;
+        }
+        }
+        function allow(){
+            coolDown = true;
+        }
+    </script>
+</body>
+</html>

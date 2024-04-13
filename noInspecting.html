@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>No copying</h1>
+    <p>Suggestion by <em>Wooorbie</em></p>
+    <div id="okay">
+        <p>
+            This is a website with a random plug to daylight Gaming
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DS2vj5X2tH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>This is a fun video you should watch</p>
+        <h2>DON'T EDIT THIS SITE OKAY?</h2>
+    </div>
+    <div id="angy" style="display: none;">
+        <p>Peace was never an option...</p>
+        <img src="img/goose.png" alt="An image of an angry goose (be careful he's got a knife)" width="100%">
+    </div>
+    <script>
+        const normal = document.getElementById("okay");
+        const angry = document.getElementById("angy");
+        document.addEventListener('keydown', function(event) {
+            // Check if the pressed key is F12 (key code 123)
+            if (event.keyCode === 123) {
+                // Your code to execute when F12 is pressed
+                normal.innerHTML = "The code is gone now good job";
+                normal.style.display = "none";
+                angry.style.display = "block";
+
+            }
+        });
+        </script>
+</body>
+</html>

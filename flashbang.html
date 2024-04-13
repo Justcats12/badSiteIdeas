@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark mode</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: black;
+            color: #fff;
+        }
+        div{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 100%;
+            gap: 1em;
+        }
+        div img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dark mode epik</h1>
+    <p>Suggestion by <em>nonamechannl</em></p>
+
+    <h2>Click one of these suns</h2>
+    <div id="images">
+    <img src="img/sun.png" alt="Sun" id="0" onclick="trigger(0)">
+    <img src="img/sun.png" alt="Sun" id="1" onclick="trigger(1)">
+    <img src="img/sun.png" alt="Sun" id="2" onclick="trigger(2)">
+    <img src="img/sun.png" alt="Sun" id="3" onclick="trigger(3)">
+    </div>
+    <script>
+        const trap = Math.floor(Math.random()*4);
+        const images = document.getElementById("images")
+
+
+        function trigger(int){
+            if (int === trap){
+                document.body.style.backgroundColor = "white";
+                images.style.display = "none";
+            }else{
+                document.getElementById(int).src = "./img/sunClicked.png";
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
