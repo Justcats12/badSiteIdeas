@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat (punchable)</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        #fist{
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cat (punchable)</h1>
+    <p>Suggestion by <em>tr1ha</em></p>
+    <p>This site does <strong>not</strong> endourse animal abuse since this is a cartoon cat.</p>
+    <img src="../img/cat.png" alt="Image of a cat" onclick="punch()"><br>
+    <img src="../img/fist.png" alt="Fist for punching" id="fist">
+
+    <script>
+        const fist = document.getElementById("fist");
+
+        function punch(){
+            fist.style.transform = "translate(0,-200px)"
+            setTimeout(() => {unpunch()
+                
+            }, 1000);
+        }
+        function unpunch(){
+            fist.style.transform = "translate(0,0)"
+
+        }
+
+
+    </script>
+</body>
+</html>

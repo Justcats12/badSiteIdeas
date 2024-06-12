@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark mode</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <style>
         body{
             background-color: black;
@@ -27,10 +27,10 @@
 
     <h2>Click one of these suns</h2>
     <div id="images">
-    <img src="img/sun.png" alt="Sun" id="0" onclick="trigger(0)">
-    <img src="img/sun.png" alt="Sun" id="1" onclick="trigger(1)">
-    <img src="img/sun.png" alt="Sun" id="2" onclick="trigger(2)">
-    <img src="img/sun.png" alt="Sun" id="3" onclick="trigger(3)">
+    <img src="../img/sun.png" alt="Sun" id="0" onclick="trigger(0)">
+    <img src="../img/sun.png" alt="Sun" id="1" onclick="trigger(1)">
+    <img src="../img/sun.png" alt="Sun" id="2" onclick="trigger(2)">
+    <img src="../img/sun.png" alt="Sun" id="3" onclick="trigger(3)">
     </div>
     <script>
         const trap = Math.floor(Math.random()*4);
@@ -42,7 +42,7 @@
                 document.body.style.backgroundColor = "white";
                 images.style.display = "none";
             }else{
-                document.getElementById(int).src = "./img/sunClicked.png";
+                document.getElementById(int).src = "../img/sunClicked.png";
             }
         }
 

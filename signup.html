@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up ception</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .texts{
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 1em;
+            margin-bottom: 1em;
+        }
+        .texts label{
+            text-align: right;
+        }
+        .texts input{
+            width: 50%;
+        }
+        #popup{
+            position: absolute;
+            background-color: lightgray;
+            border: solid black 3px;
+            border-radius: 1em;
+            
+            margin:10em auto;
+            left: 0;
+            right: 0;
+            width: 50%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="popup">
+        <h1>Log in to sign up</h1>
+        <p>You need an account to sign up</p>
+        <form action="" id="login" autocomplete="off">
+            <div class="texts">
+                <label for="username">Username: </label>
+                <input type="text" name="username" placeholder="example123">
+                <label for="password">Password: </label>
+                <input type="password" name="password" placeholder="password">
+            </div>
+            <p><input type="submit" value="Log in"></p>
+        </form>
+        <p><a href="./signup.html">Don't have an account?</a></p>
+    </div>
+    <h1>Sign up</h1>
+    <p><em>thaaat_one_guy</em></p>
+    <form id="signup" autocomplete="off">
+    <div class="texts">
+        <label for="username">Username: </label>
+        <input type="text" name="username" placeholder="example123" required>
+        
+        
+            <label for="email">Email: </label>
+            <input type="email" name="email" placeholder="example@mail.com" required>
+        
+        
+            <label for="password">Password: </label>
+            <input type="password" name="password" placeholder="password" required>
+        
+        
+            <label for="Comfirm">Comfirm password: </label>
+            <input type="password" name="Comfirm" placeholder="password" required>
+            
+    </div>
+    <input type="checkbox" name="terms" required>
+    <label for="terms">I agree to the terms and conditions</label>
+    <p><input type="submit" value="Sign up" onmousedown="document.getElementById('popup').style.display = 'block'"></p>
+    </form>
+</body>
+</html>

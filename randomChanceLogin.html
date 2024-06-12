@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Login to gamble</h1>
+    <p>Suggestion by <em>elkapalio</em></p>
+    <form action="#" id="form" autocomplete="off">
+        <p>
+            <label for="username">Username: </label>
+            <input type="text" name="username" placeholder="example123" id="name">
+        </p>
+        <p>
+            <label for="password">Password: </label>
+            <input type="password" name="password" placeholder="password" id="pass">
+        </p>
+        <p>
+            
+            <input type="checkbox" name="agree" id="agree1">
+            <label for="agree">I agree to the terms of serivice</label>
+        </p>
+        <p>
+            <input type="checkbox" name="agree" id="agree2">
+            <label for="agree">I agree to pay 5$ at random moments</label>
+        </p>
+        <p>
+            <input type="checkbox" name="agree" id="agree3">
+            <label for="agree">I agree to sacrifice my firstborn to Xsachali The Great</label>
+        </p>
+        
+    </form>
+    <button id="btn">Login</button>
+    <p id="message"></p>
+    <script>
+        const message = document.getElementById("message");
+        const form = document.getElementById("form");
+        function click(){
+            if (Math.floor(Math.random()*100) === 1){
+                message.innerHTML = "Login succesfull!";
+                message.style.color = "lime";
+            }
+            else{
+                message.innerHTML = "Try again!";
+                message.style.color = "red";
+                form.reset();
+            }
+        }
+        document.getElementById("btn").onclick = click;
+
+    </script>
+</body>
+</html>
