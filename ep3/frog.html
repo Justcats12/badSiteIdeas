@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Froginator</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        button{
+            padding: 1em;
+            background-color: lime;
+            border: solid green 3px;
+            font-size: 2em;
+            font-family: 'comic sans ms', sans-serif;
+            font-weight: bold;
+            border-radius: 1em;
+            transition: 0.5s;
+        }
+        button:hover{
+            transform: scale(1.2);
+            transition: 0.5s;
+        }
+        button:active{
+            transform: scale(1);
+            transition: 100ms;
+        }
+    </style>
+</head>
+<body>
+    <h1>Turn into frog</h1>
+    <p>Suggestion by <em>name</em></p>
+    <button id="btn" >
+        Frogify urself!
+    </button>
+    <div id="camera" style="display: none;">
+        <p>Displaying front camera:</p>
+        <img src="../img/loading.gif" alt="front camera" id="img" height="200px">
+    </div>
+    <script>
+        const button = document.getElementById("btn");
+        const cam = document.getElementById("camera");
+
+        button.onclick = () =>{
+            cam.style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('img').src = '../img/phrog.png';
+            }, 1000);
+            
+        }
+    </script>
+</body>
+</html>
