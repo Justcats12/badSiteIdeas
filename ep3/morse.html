@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse code login</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>Morse code login</h1>
+    <p>Suggestion by <em>Nystika</em></p>
+    <label>Login: <input type="text" placeholder="username"></label>
+    <p>Password: <span id="output"></span></p>
+
+    <p><button id="mcbtn">Input morse code</button></p>
+    <p><button id="signin">Sign in</button></p>
+    <script>
+        const mcBtn = document.getElementById('mcbtn');
+        const output = document.getElementById('output');
+        document.getElementById('signin').onclick = () => {
+            window.open("https://youtu.be/Fzh65vCyHWQ?t=1100");
+        }
+
+        mcBtn.onmousedown = push;
+        mcBtn.onmouseup = release;
+
+        let currentIsLong = false;
+        let beenRegistered = true;
+
+        function push(){
+            currentIsLong = false;
+            beenRegistered = false;
+            setTimeout(() => {
+                if (beenRegistered === false){
+                currentIsLong = true;}
+            }, 300);
+        }
+
+        function release(){
+            let char
+            if (currentIsLong){
+                char = '_'
+            }else{
+                char = '.'
+            }
+            beenRegistered = true;
+            output.insertAdjacentHTML("beforeend", char)
+        }
+    </script>
+</body>
+</html>
