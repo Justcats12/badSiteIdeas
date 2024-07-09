@@ -33,18 +33,18 @@
             setTimeout(() => {
                 if (beenRegistered === false){
                 currentIsLong = true;}
-            }, 300);
+            }, 250);
         }
 
         function release(){
             let char
             if (currentIsLong){
-                char = '_'
+                char = '_';
             }else{
-                char = '.'
+                char = '.';
             }
             beenRegistered = true;
-            output.insertAdjacentHTML("beforeend", char)
+            output.insertAdjacentHTML("beforeend", char);
         }
     </script>
 </body>
